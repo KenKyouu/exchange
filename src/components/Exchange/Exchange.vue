@@ -4,30 +4,30 @@
 export default {
   data() {
     return{
-      tai: 1,
-      tai2: 1,
-      pc: 1,
+      tai: "",
+      tai2: "",
+      pc: "",
     }
   },
   computed: {
     cm:  {
       get() {
-        return Number.parseFloat(Number(this.tai) / 1000 * 303).toFixed(2)
+        return Number.parseFloat(Number(this.tai) / 1000 * 303).toFixed(1)
       }
     },
     mm:  {
       get() {
-        return Number.parseFloat(Number(this.tai) / 100 * 303).toFixed(2)
+        return Math.round(Number.parseFloat(Number(this.tai) / 100 * 303))
       }
     },
     cm2:  {
       get() {
-        return Number.parseFloat(Number(this.tai2) / 1000 * 303).toFixed(2)
+        return Number.parseFloat(Number(this.tai2) / 1000 * 303).toFixed(1)
       }
     },
     mm2:  {
       get() {
-        return Number.parseFloat(Number(this.tai2) / 100 * 303).toFixed(2)
+        return Math.round(Number.parseFloat(Number(this.tai2) / 100 * 303))
       }
     },
     squareM: {
@@ -50,7 +50,7 @@ export default {
       <div class="wrap">
         <div class="col tai">
           <p><font-awesome-icon icon="pencil" /></p>
-          <input type="text" v-model="tai">
+          <input type="number" v-model="tai" placeholder="請輸入">
         </div>
         <div class="col cm">
           <p>cm</p>
@@ -64,7 +64,7 @@ export default {
       <div class="wrap">
         <div class="col tai">
           <p><font-awesome-icon icon="pencil" /></p>
-          <input type="text" v-model="tai2">
+          <input type="number" v-model="tai2" placeholder="請輸入">
         </div>
         <div class="col cm">
           <p>cm</p>
@@ -80,7 +80,7 @@ export default {
       <div class="wrap">
         <div class="col pc">
           <p>片數</p>
-          <input type="text" v-model="pc">
+          <input type="number" v-model="pc" placeholder="請輸入">
         </div>
         <div class="col squareM">
           <p>平方米</p>

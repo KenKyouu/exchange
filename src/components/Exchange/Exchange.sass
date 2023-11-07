@@ -14,7 +14,11 @@
     letter-spacing: 1px
     font-size: 17px
     color: #fff
-    @media screen and ( max-width: 996px )
+    @media screen and ( max-width: 992px )
+        max-width: 500px
+        // flex-direction: column
+        font-size: 14px
+    @media screen and ( max-width: 576px )
         max-width: 500px
         flex-direction: column
         font-size: 14px
@@ -22,7 +26,7 @@
         display: flex
     .wrap1
         margin-right: 10px
-        @media screen and ( max-width: 996px )
+        @media screen and ( max-width: 576px )
             margin-right: 0
             margin-bottom: 20px
     .wrap
@@ -40,7 +44,10 @@
                 align-items: center
                 font-weight: 900
                 border-top-left-radius: 5px
-                @media screen and ( max-width: 996px )
+                @media screen and ( max-width: 992px )
+                    width: 60px
+                    height: 60px
+                @media screen and ( max-width: 576px )
                     width: 50px
                     height: 50px
             > input
@@ -63,7 +70,12 @@
                     background: #ccc
                     border: none
                     border-bottom: 3px solid #777
-                @media screen and ( max-width: 996px )
+                @media screen and ( max-width: 992px )
+                    padding: 10px
+                    width: 125px
+                    height: 60px
+                    font-size: 14px
+                @media screen and ( max-width: 576px )
                     padding: 10px
                     width: 100px
                     height: 50px
@@ -81,3 +93,11 @@
                 > p
                     background-color: darkseagreen
                     border-bottom: 3px solid #396039
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+
+input[type=number]
+    -moz-appearance: textfield
