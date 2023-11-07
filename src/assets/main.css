@@ -1,0 +1,6 @@
+@import './base.css';
+
+body {
+    background: linear-gradient(to top, #114357 0%, #784040 100%), #114357;
+    overflow: hidden;
+}
